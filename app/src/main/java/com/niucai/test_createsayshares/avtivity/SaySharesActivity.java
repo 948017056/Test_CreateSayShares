@@ -87,7 +87,6 @@ public class SaySharesActivity extends AppCompatActivity implements View.OnClick
         tv_start.setOnClickListener(this);
         mSolidCircle.setOnClickListener(this);
 
-
     }
 
     @Override
