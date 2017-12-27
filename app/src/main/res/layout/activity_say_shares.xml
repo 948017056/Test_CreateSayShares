@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cpbv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.niucai.test_createsayshares.avtivity.SaySharesActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_create_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/tv_create_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8sp"
+            android:text="录制讲股"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/iv_SayShares_Back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/back_black" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="8dp"
+            android:background="#faf6f6"
+            android:padding="7dp"
+            android:text="保存"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/tv_ZhangJieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="章节标题"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_XiaoJieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="小结标题"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_Recording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="正在录制"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="最长可录制5分钟"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <com.niucai.test_createsayshares.view.HollowCircle
+            android:id="@+id/mHollowCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.niucai.test_createsayshares.view.SolidCircle
+            android:id="@+id/mSolidCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="#ff0000" />
+
+        <com.niucai.test_createsayshares.view.CircleProgressBarView
+            android:id="@+id/circle_progress_view"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="18dp"
+            android:visibility="invisible"
+            cpbv:centerProgressTextColor="#000000"
+            cpbv:centerProgressTextSize="20sp"
+            cpbv:circleBgStrokeWidth="10dp"
+            cpbv:isDrawCenterProgressText="true"
+            cpbv:progressStrokeWidth="10dp" />
+
+        <Button
+            android:id="@+id/but_Paly"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:id="@+id/but_Reset"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/tv_Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/but_Reset"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="重新录制" />
+
+        <TextView
+            android:id="@+id/tv_Paly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/but_Paly"
+            android:layout_marginRight="30dp"
+            android:text="播放" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/but_AddTimeTag"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tv_AddTimeTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/but_Paly"
+        android:gravity="center_horizontal"
+        android:text="添加时间标记" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="插入图片" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="插入文本" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:text="开始时间/结束时间" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
