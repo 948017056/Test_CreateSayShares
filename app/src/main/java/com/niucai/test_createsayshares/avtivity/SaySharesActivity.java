@@ -23,10 +23,6 @@ import com.niucai.test_createsayshares.view.CircleProgressBarView;
 import com.niucai.test_createsayshares.view.HollowCircle;
 import com.niucai.test_createsayshares.view.SolidCircle;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 public class SaySharesActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "SaySharesActivity";
