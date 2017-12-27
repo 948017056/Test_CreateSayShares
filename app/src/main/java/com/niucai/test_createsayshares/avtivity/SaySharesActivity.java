@@ -40,7 +40,6 @@ public class SaySharesActivity extends AppCompatActivity implements View.OnClick
     private TextView tv_Paly;
     private Button but_AddTimeTag;
     private TextView tv_AddTimeTag;
-
     private volatile boolean isStart;
     private volatile boolean isPlay;
     public volatile boolean isStop;
